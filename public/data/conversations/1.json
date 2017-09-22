@@ -1,0 +1,297 @@
+{
+    "id": "b989ee43-e628-46c5-ad01-d8dc7cb67a42",
+    "score": 1,
+    "customer_name": "Cathrine Ang",
+    "agent_name": "Viki Dipietro",
+    "text": "[ Bug: SUB_Tabletop 2017 on MTX Notebook 9 2017 Not Loading (Load nor Autoload) on 5k iSystem X27 (M395) 5k Native Resolution. God bls. Prv. 31\nFor #MTX Notebook 9 2017, SUB_MTX Notebook 9 is now the official rendering tool. If you need help with SUB_Tabletop on the 2017 version, please (1/2)\ncontact Halo Illumia 3 instead: URL (2/2) \n",
+    "data_type": "conversation",
+    "Turn3": {
+        "speaker": "agent",
+        "sentiment": "neutral",
+        "tones": {
+            "sad": 0.675012
+        }
+    },
+    "enriched_text": {
+        "entities": [
+            {
+                "count": 1,
+                "disambiguated": {
+                    "website": "http://www.blacklabelsociety.com",
+                    "name": "Black Label Society",
+                    "dbpedia": "http://dbpedia.org/resource/Black_Label_Society",
+                    "freebase": "http://rdf.freebase.com/ns/m.0234cc",
+                    "yago": "http://yago-knowledge.org/resource/Black_Label_Society",
+                    "musicBrainz": "http://zitgist.com/music/artist/a8e935c6-3fcc-414c-900c-77e8170e7e7c",
+                    "subType": [
+                        "MusicalGroup",
+                        "BroadcastArtist",
+                        "Composer",
+                        "Lyricist",
+                        "MusicalArtist"
+                    ]
+                },
+                "sentiment": {
+                    "type": "neutral",
+                    "mixed": false
+                },
+                "text": "bls",
+                "relevance": 0.905959,
+                "type": "Organization"
+            },
+            {
+                "count": 1,
+                "disambiguated": {
+                    "opencyc": "http://sw.opencyc.org/concept/Mx4rvgvX-pwpEbGdrcN5Y29ycA",
+                    "website": "http://www.nvidia.com/",
+                    "name": "Nvidia",
+                    "crunchbase": "http://www.crunchbase.com/company/nvidia",
+                    "dbpedia": "http://dbpedia.org/resource/Nvidia",
+                    "geo": "37.37072777777778,-121.96373888888888",
+                    "freebase": "http://rdf.freebase.com/ns/m.09rh_",
+                    "subType": [
+                        "SoftwareDeveloper",
+                        "VentureFundedCompany"
+                    ]
+                },
+                "sentiment": {
+                    "type": "neutral",
+                    "mixed": false
+                },
+                "text": "nvidia",
+                "relevance": 0.820092,
+                "type": "Company"
+            },
+            {
+                "count": 2,
+                "sentiment": {
+                    "type": "neutral",
+                    "mixed": false
+                },
+                "text": "arnold",
+                "relevance": 0.764896,
+                "type": "Person"
+            },
+            {
+                "count": 2,
+                "sentiment": {
+                    "type": "neutral",
+                    "mixed": false
+                },
+                "text": "5k",
+                "relevance": 0.764896,
+                "type": "Quantity"
+            },
+            {
+                "count": 1,
+                "sentiment": {
+                    "type": "neutral",
+                    "mixed": false
+                },
+                "text": "maya",
+                "relevance": 0.764896,
+                "type": "Hashtag"
+            }
+        ],
+        "taxonomy": [
+            {
+                "label": "/technology and computing/hardware/computer components/graphics cards",
+                "score": 0.57635,
+                "confident": false
+            },
+            {
+                "label": "/society/work/unemployment",
+                "score": 0.575347,
+                "confident": false
+            },
+            {
+                "label": "/technology and computing/operating systems/linux",
+                "score": 0.510562,
+                "confident": false
+            }
+        ],
+        "concepts": [
+            {
+                "text": "2007 albums",
+                "relevance": 0.914629,
+                "dbpedia": "http://dbpedia.org/resource/2007_albums"
+            },
+            {
+                "text": "Display resolution",
+                "relevance": 0.813372,
+                "dbpedia": "http://dbpedia.org/resource/Display_resolution",
+                "freebase": "http://rdf.freebase.com/ns/m.02v9m6"
+            }
+        ],
+        "language": "english",
+        "status": "OK",
+        "relations": [
+            {
+                "sentence": " If you need help with mental ray on the 2017 version, please (1/2)",
+                "subject": {
+                    "text": "you"
+                },
+                "action": {
+                    "text": "need",
+                    "lemmatized": "need",
+                    "verb": {
+                        "text": "need",
+                        "tense": "present"
+                    }
+                },
+                "object": {
+                    "text": "help with mental ray on the 2017 version",
+                    "sentiment": {
+                        "type": "positive",
+                        "score": 0.499618,
+                        "mixed": false
+                    },
+                    "sentimentFromSubject": {
+                        "type": "negative",
+                        "score": -0.482878,
+                        "mixed": false
+                    },
+                    "keywords": [
+                        {
+                            "text": "mental ray"
+                        },
+                        {
+                            "text": "help"
+                        },
+                        {
+                            "text": "version"
+                        }
+                    ]
+                }
+            }
+        ],
+        "keywords": [
+            {
+                "relevance": 0.913246,
+                "sentiment": {
+                    "type": "neutral",
+                    "mixed": false
+                },
+                "text": "mental ray"
+            },
+            {
+                "relevance": 0.814334,
+                "sentiment": {
+                    "type": "neutral",
+                    "mixed": false
+                },
+                "text": "official rendering tool"
+            },
+            {
+                "relevance": 0.627151,
+                "sentiment": {
+                    "type": "neutral",
+                    "mixed": false
+                },
+                "text": "God bls"
+            },
+            {
+                "relevance": 0.584513,
+                "sentiment": {
+                    "type": "neutral",
+                    "mixed": false
+                },
+                "text": "contact NVIDIA"
+            },
+            {
+                "relevance": 0.564171,
+                "sentiment": {
+                    "type": "neutral",
+                    "mixed": false
+                },
+                "text": "Native Resolution"
+            },
+            {
+                "relevance": 0.444928,
+                "sentiment": {
+                    "type": "neutral",
+                    "mixed": false
+                },
+                "text": "Maya"
+            },
+            {
+                "relevance": 0.335998,
+                "sentiment": {
+                    "type": "neutral",
+                    "mixed": false
+                },
+                "text": "iMac"
+            },
+            {
+                "relevance": 0.299449,
+                "sentiment": {
+                    "score": -0.27699,
+                    "type": "negative",
+                    "mixed": false
+                },
+                "text": "Bug"
+            },
+            {
+                "relevance": 0.286752,
+                "sentiment": {
+                    "type": "neutral",
+                    "mixed": false
+                },
+                "text": "Arnold"
+            },
+            {
+                "relevance": 0.263853,
+                "sentiment": {
+                    "score": -0.372732,
+                    "type": "negative",
+                    "mixed": false
+                },
+                "text": "Autoload"
+            },
+            {
+                "relevance": 0.263138,
+                "sentiment": {
+                    "type": "neutral",
+                    "mixed": false
+                },
+                "text": "M395"
+            },
+            {
+                "relevance": 0.261288,
+                "sentiment": {
+                    "type": "neutral",
+                    "mixed": false
+                },
+                "text": "Prv."
+            },
+            {
+                "relevance": 0.253702,
+                "sentiment": {
+                    "type": "neutral",
+                    "mixed": false
+                },
+                "text": "help"
+            }
+        ],
+        "docSentiment": {
+            "type": "neutral",
+            "mixed": false
+        }
+    },
+    "metadata": {},
+    "length": "3",
+    "time": "Mon Feb 06 03:11:46 +0000 2017",
+    "Turn2": {
+        "speaker": "agent",
+        "sentiment": "neutral",
+        "tones": {}
+    },
+    "conversation_id": "58bf831f38e61e0046c9de37",
+    "Turn1": {
+        "speaker": "customer",
+        "sentiment": "neutral",
+        "tones": {
+            "impolite": 0.822103
+        }
+    }
+}

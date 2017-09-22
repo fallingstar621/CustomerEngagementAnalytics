@@ -1,0 +1,4 @@
+---
+applications:
+ - name: Customer-Engagement-Analytics-Test
+   memory: 512MB

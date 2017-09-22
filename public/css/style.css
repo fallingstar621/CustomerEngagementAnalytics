@@ -1,0 +1,277 @@
+h1 {
+    color: #1c496d;
+    font-size: 3.125rem;
+    font-weight: 400;
+    letter-spacing: .8px;
+    padding: 0 0 5px 0
+}
+
+h6{
+  padding: 0 0 10px 0;
+  font-weight: bold;
+  color: #1c496d;
+  font-size: 1.5em;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.center{
+  text-align:center;
+}
+
+.box {
+    padding: 0px 0px 0px 0px;
+}
+.box .inner,
+.box.inner  {
+    padding: 20px;
+    font-size: 16px;
+    overflow: hidden;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border: 1px solid #dfe3e6; }
+
+.box:focus {
+  outline: 1px solid #3d70b2;
+}
+
+/* bar Tooltip */
+
+.barTooltip {
+    position: absolute;
+    background: #fff;
+    text-align: left;
+    padding: 5px;
+    border: 1px solid lightgray;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+    opacity: 0;
+    max-width: 300px;
+    font-size: 16px;
+}
+
+/* Header Info */
+
+.container{
+  position: relative;
+}
+
+#headerInfo {
+  color: #1c496d;
+  float:left;
+}
+
+.searchHeader {
+  font-weight: bold;
+  color: #1c496d;
+}
+
+.searchInfo {
+  font-size: 18px;
+}
+
+.searchBox{
+  width: 50%;
+  margin:auto;
+  top:5px;
+  bottom:20px;
+}
+
+#searchBlockTop{
+  bottom:20px;
+}
+
+/* Tabs */
+
+.tab-container {
+  display: block;
+}
+
+.tab-header {
+  font-weight: bold;
+  color: #1c496d;
+  font-size: 1.5em;
+}
+
+.tab-header:hover {
+  color: #3d70b2;
+}
+
+.tab-question {
+  font-weight: normal;
+  font-size: 16px;
+  color: #777677;
+}
+.tab-statement {
+  font-weight: normal;
+  font-size: 1em;
+  border-top: 1px dotted #dcdcdc;
+  padding-top: 10px;
+  margin-top: 10px;
+  color: black;
+}
+
+/* Bootstrap Nav Tabs Override */
+.nav-tabs li {
+  width: 25%;
+}
+
+.nav-tabs li a {
+  min-height: 145px;
+}
+
+/* Conversation Extraction Panels */
+.conversation-extractions .extraction-panel {
+  height: 14em;
+}
+
+/* Labels */
+
+.label-headers {
+  display: block;
+  padding-bottom: 5px;
+  overflow: hidden;
+}
+
+.label-headers h5 {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0 0 20px 0
+}
+
+.frequency-label,
+.keyword-label {
+  font-weight: bold;
+  font-size: .8em;
+}
+
+.frequency-label,
+.frequency {
+  width: 35%;
+  float: left;
+}
+
+.keyword-label,
+.keyword {
+  width: 65%;
+  float: left;
+}
+
+a.keyword , a.frequency {
+  cursor: pointer;
+}
+
+.keyword, .frequency {
+  line-height: 1.9em;
+}
+
+/* Conversation Content */
+.content b {
+  width: 16%;
+  float: left;
+  padding: 0px 10px;
+  box-sizing: border-box;
+}
+
+.content span {
+  overflow: hidden;
+  float: left;
+  width: 66%;
+}
+
+.convo-line {
+  padding: 10px 0px;
+  border-bottom: 1px solid #dcdcdc;
+  overflow: hidden;
+}
+
+.convo-line:hover {
+  background: #f9f9f9;
+}
+
+.speaker {
+  font-size: .8em;
+  display: block;
+  text-transform: uppercase;
+  color: black;
+  text-align: left;
+  font-weight: normal;
+  padding: 5px 0px;
+}
+
+.popover-title .close{
+    position: relative;
+    bottom: 12px;
+    right:-10px;
+}
+
+.popover{
+  width:200px;
+  font-size: 16px;
+}
+
+.footer{
+  font-size: 14px;
+  padding: 20px;
+  float:right;
+}
+
+#filterHeader{
+   border-width: 0px; 
+   text-align: right; 
+   width:970px;
+   -webkit-box-shadow: none;
+   -moz-box-shadow: none;
+   box-shadow: none;
+}
+
+#tag-cloud {
+  width: 285px;
+  margin-left: 0;
+}
+.tag-cloud {
+    background-color: #999999;
+    -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+    color: #FFFFFF;
+    cursor: default;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 30px;
+    margin: 2px 3px 2px 2px;
+    padding: 2px 10px 2px;
+    vertical-align: baseline;
+}
+.tag-cloud:after {
+    color: #000000;
+    /*content: " ×";*/
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 16px;
+    opacity: 0.2;
+  position: relative;
+    text-shadow: 0 1px 0 #FFFFFF;
+  top: 1px;
+}
+
+.tag-cloud.tag-cloud-info {
+    background-color: #464646;
+}
+.tag-cloud.tag-cloud-success {
+    background-color: #468847;
+}
+.tag-cloud.tag-cloud-warning {
+    background-color: #F89406;
+}
+.tag-cloud.tag-cloud-danger {
+    background-color: #B94A48;
+}
+.tag-cloud.tag-cloud-inverse {
+    background-color: #333333;
+}

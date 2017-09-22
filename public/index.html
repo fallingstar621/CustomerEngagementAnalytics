@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://unpkg.com/carbon-components/css/carbon-components.min.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="lib/jquery.simplePagination.js"></script>
+<script src="lib/bootstrap-spinner.js"></script>
+<script src="lib/bootstrap-tag-cloud.js"></script>
+<script src="https://unpkg.com/carbon-components/scripts/carbon-components.min.js"></script>
+<script src="lib/d3.min.js"></script>
+<title>Customer Engagement Analytics</title>
+
+<body>
+<div class="page-header">
+      <div class="container">
+        <div class="dialog-description">
+          <div id="appHeader">
+            <h1> <span>Customer Engagement Analytics</span></h1>
+          </div>
+          <div id="headerInfo" class="hero__description">
+            <p>Analyze conversations between customers and your customer service agents.</p>
+            <p> Use the Customer Engagement Analytics to:
+            <ol class="bx--list--nested">
+              <li class="bx--list__item">Measure customer satisfaction</li>
+              <li class="bx--list__item">Identify customers' concerns</li>
+              <li class="bx--list__item">Evaluate agent performance</li>
+              <li class="bx--list__item">See how conversations start verses how they finish</li>
+            </ol>
+            </p>
+          </div>
+        </div>
+
+      </div>
+  </div>
+
+<div class="container box" style='position:relative;' >
+
+   <div class="col-md-12 box inner center" id='searchBlockTop' style='display:none'>
+        <p class='searchInfo' id='searchInfoTop'></p>
+        <div data-search class="bx--search bx--search--sm searchBox" role="search">
+          <svg class="bx--search-magnifier" width="16" height="16" viewBox="0 0 16 16" fill-rule="evenodd">
+            <path d="M6 2c2.2 0 4 1.8 4 4s-1.8 4-4 4-4-1.8-4-4 1.8-4 4-4zm0-2C2.7 0 0 2.7 0 6s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6zM16 13.8L13.8 16l-3.6-3.6 2.2-2.2z"></path>
+            <path d="M16 13.8L13.8 16l-3.6-3.6 2.2-2.2z"></path>
+          </svg>
+          <label id="search-input-label-1" class="bx--label" for="search_input_top">Search</label>
+          <input class="bx--search-input" type="text" id="search_input_top" role="search" placeholder="Search Products, Agents and Customers..." aria-labelledby="search-input-label-1">
+          <svg class="bx--search-close" width="16" height="16" viewBox="0 0 16 16" fill-rule="evenodd">
+            <path d="M8 0C3.6 0 0 3.6 0 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zm3.5 10.1l-1.4 1.4L8 9.4l-2.1 2.1-1.4-1.4L6.6 8 4.5 5.9l1.4-1.4L8 6.6l2.1-2.1 1.4 1.4L9.4 8l2.1 2.1z"></path>
+          </svg>
+        </div>
+      </div>
+
+   <ul class="nav nav-tabs" style="font-size: 14px">
+    <li class="active">
+      <a data-toggle="tab" href="#menu1">
+        <span class="tab-container tab-header">Customer Satisfaction</span>
+        <span class="tab-container tab-question">How satisfied are customers with our service, by product?</span>
+      </a>
+    </li>
+    <li><a data-toggle="tab" href="#menu2">
+      <span class="tab-container tab-header">Customer Concerns</span>
+      <span class="tab-container tab-question">What are the top concerns our customers discuss?</span>
+      </a></li>
+    <li><a data-toggle="tab" href="#menu3">
+      <span class="tab-container tab-header">Agent Performance</span>
+      <span class="tab-container tab-question">How are our agents performing based on customer tones?</span>
+    </a></li>
+    <li><a data-toggle="tab" href="#menu4">
+      <span class="tab-container tab-header">Initial Customer Tones</span>
+      <span class="tab-container tab-question">What are our customers' tones in their first interaction with us?</span>
+      </a>
+    </li>
+  </ul>
+
+  <div class="tab-content">
+    <div id='menu1' class="tab-pane fade in active">
+      <div id="chart1" class='inner'></div>
+    </div>
+    <div id='menu2' class="tab-pane fade">
+      <div id="chart2" class='inner'></div>
+    </div>
+    <div id='menu3' class="tab-pane fade">
+     <div id="chart3" class='inner'></div>
+    </div>
+     <div id='menu4' class="tab-pane fade">
+      <div id="chart4" class='inner'></div>
+    </div>
+  </div>
+ </div>
+
+<div id='loadingSpinner' class="bx--loading-overlay" style='display:none;'>
+  <div data-loading class="bx--loading">
+    <svg class="bx--loading__svg" viewBox="-75 -75 150 150">
+      <circle cx="0" cy="0" r="37.5" />
+    </svg>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row"">
+    <div class="col box inner">
+      <span id="tag-info" data-cloud-name="filter-tag-cloud"></span> <a onclick="clearFilter()" style='cursor: pointer;' id='filterReset'></a>
+      <h6><span id="conversationHeader"></span> With Customer Service Agents</h6>
+
+      <div class="conversation-extractions">
+         <div class="col-md-6 box inner">
+           <div id='agentPanel'" class="extraction-panel"></div>
+        </div>
+        <div class="col-md-6 box inner">
+           <div id='customerPanel'" class="extraction-panel"></div>
+        </div>
+      </div>
+
+      <div class="col-md-12 box inner">
+       <div class="input-group">
+          <span class="form-control" id="filterHeader">Number of Statements</span>
+          <span class="input-group-btn" >
+              <button type="button" class="btn btn-default" data-value="decrease" data-target="#spinner" data-toggle="spinner"><span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" data-ride="spinner" id="spinner" class="form-control input-number" value="2">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-default" data-value="increase" data-target="#spinner" data-toggle="spinner">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+        </div>
+
+        <div id="conversationLegend"></div>
+        <div class='content' id="content" style='margin-top: 20px; height:300px; overflow-y: auto;'></div>
+        <nav aria-label="Page navigation" style='text-align:center'>
+          <ul class="pagination" id="pagination"></ul>
+        </nav>
+      </div>
+
+
+      <div class="col-md-12 box inner center" id='searchBlockBottom'>
+         <p class='searchHeader'>Would you like to dig deeper into the data? </p>
+         <p class='searchInfo'>Filter all conversations by Product, Agent or Customer Name</p>
+
+         <div data-search class="bx--search bx--search--sm searchBox" role="search">
+          <svg class="bx--search-magnifier" width="16" height="16" viewBox="0 0 16 16" fill-rule="evenodd">
+            <path d="M6 2c2.2 0 4 1.8 4 4s-1.8 4-4 4-4-1.8-4-4 1.8-4 4-4zm0-2C2.7 0 0 2.7 0 6s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6zM16 13.8L13.8 16l-3.6-3.6 2.2-2.2z"></path>
+            <path d="M16 13.8L13.8 16l-3.6-3.6 2.2-2.2z"></path>
+          </svg>
+          <label id="search-input-label-1" class="bx--label" for="search_input_bottom">Search</label>
+          <input class="bx--search-input" type="text" id="search_input_bottom" role="search" placeholder="Search Products, Agents and Customers..." aria-labelledby="search-input-label-1">
+          <svg id='bx--search-close' class="bx--search-close bx--search-close--hidden" width="16" height="16" viewBox="0 0 16 16" fill-rule="evenodd">
+            <path d="M8 0C3.6 0 0 3.6 0 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zm3.5 10.1l-1.4 1.4L8 9.4l-2.1 2.1-1.4-1.4L6.6 8 4.5 5.9l1.4-1.4L8 6.6l2.1-2.1 1.4 1.4L9.4 8l2.1 2.1z"></path>
+          </svg>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script src="views/stackedBarChart.js">> </script>
+<script src="views/discoveryView.js">> </script>
+
+<div class="container">
+  <footer class='footer'>
+    <div><a href="https://www.ibm.com/watson/developercloud/tone-analyzer/api/v3/#customer-tone" target="_blank">API Reference</a><span> | </span><a href="https://www.ibm.com/watson/developercloud/doc/tone-analyzer/index.html"  target="_blank">Documentation</a><span> | </span><a href="https://github.ibm.com/Xiaotong-Liu/CustomerEngagementAnalytics" target="_blank">Fork on Github</a><span> | </span><a href="https://console.ng.bluemix.net/registration/?target=/catalog/services/tone-analyzer/">Start free in Bluemix</a></div>
+  </footer>
+</div>
+
+</body>
+</html>

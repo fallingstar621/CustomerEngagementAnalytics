@@ -1,0 +1,9 @@
+The input conversation data to start with should be a csv file where each row is an utterance with the following fields:
+
+conversation_id: the id of the conversation where the utterance belongs
+speaker_name: the speaker's name of the utterance
+speaker_type: agent/customer
+text: the text of the utterance
+utterance_id: the sequential turn of the utterance in the conversation (starts from 1)
+
+You can find a sample csv file 'input_sample.csv' under the public/data folder.

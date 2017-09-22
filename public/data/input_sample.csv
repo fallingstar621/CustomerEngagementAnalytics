@@ -1,0 +1,9 @@
+conversation_id,speaker_name,speaker_type,text,utterance_id
+1,Customer1,customer,I've tried on two different laptops and neither Tabletop nor OVX Book will properly download? Why is that,1
+1,Agent1,agent,Hi! Have you tried download #Tabletop and #OVX Book from our virtual agent: URL ?,2
+2,Customer2,customer,"your products make me suicidal, thank you so very much for making me not want to be an engineer",1
+2,Agent2,agent,Very sorry to hear you feel that way. :( Is there anything in particular we can assist with in #OVX Book?,2
+2,Customer2,customer,well I'm using #OVX Book in my engineering class and it's 2016 can you tell me where to edit rooms?,3
+2,Agent2,agent,Are you referring to room boundaries? You can find out about them here: URL,4
+2,Customer2,customer,thx a lot!,5
+2,Agent2,agent,You are most welcome! :D,6

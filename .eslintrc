@@ -1,0 +1,26 @@
+{
+  "extends": [
+    "airbnb",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
+  "parser": "babel-eslint",
+  "rules": {
+    "import/newline-after-import": "off",
+    "import/extensions": "off",
+    "import/no-extraneous-dependencies": ["warn", {
+      "devDependencies": true,
+      "optionalDependencies": true,
+      "peerDependencies": true
+    }],
+    "max-len": ["warn", 160],
+    "consistent-return": "off",
+    "func-names": "off",
+    "global-require": "off"
+  },
+  "env": {
+    "node": true,
+    "browser": true,
+    "mocha": true
+  },
+}
